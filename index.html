@@ -8,90 +8,159 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap">
 <style>
 :root{
-  --bg:#4d6596; --surface:#e8e8e8; --surface-2:#ffffff; --ink:#2b2b2b; --muted:#5f6470; --line:#d6d8de;
-  --brand:#4350b0; --brand-deep:#2f3a86; --brand-soft:#dfe2f4; --brand-2:#8fa0e0;
-  --on-bg:#ffffff; --on-bg-muted:#d4dcee;
-  --good:#1f7a4d; --good-soft:#e2f2e9; --warn:#a85a0c; --warn-soft:#f8ecdd;
+  --bg:#4d6596; --card:#ececec; --tile:#ffffff; --ink:#262a33; --muted:#626a7a; --line:#d9dce3;
+  --brand:#4350b0; --brand-deep:#2e3887;
+  --c-google:#4350b0; --c-meta1:#e39b54; --c-meta2:#8ea3dc;
+  --track:#dfe3ee;
+  --on-bg:#ffffff; --on-bg-muted:#d3dbee;
+  --good:#1f7a4d; --good-soft:#dff1e7; --warn:#a85a0c;
   --font:"Montserrat", system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --bg:#1a2238; --surface:#232c45; --surface-2:#2b3553; --ink:#eceef5; --muted:#a9b1c8; --line:#36405f;
-  --brand:#6f7de0; --brand-deep:#3b469c; --brand-soft:#2f3866; --brand-2:#a3afef;
-  --on-bg:#ffffff; --on-bg-muted:#b9c3dd;
-  --good:#6fd3a0; --good-soft:#1d3a2c; --warn:#f2b46a; --warn-soft:#3b2c18;
+  --bg:#18203a; --card:#222b45; --tile:#2a3452; --ink:#eef0f6; --muted:#a8b0c7; --line:#36405f;
+  --brand:#7482e6; --brand-deep:#3a459e;
+  --c-google:#7482e6; --c-meta1:#eeac6a; --c-meta2:#a9baea;
+  --track:#323d5e;
+  --on-bg:#ffffff; --on-bg-muted:#b8c2dc;
+  --good:#6fd3a0; --good-soft:#1c3a2b; --warn:#f2b46a;
   color-scheme:dark}}
 :root[data-theme="dark"]{
-  --bg:#1a2238; --surface:#232c45; --surface-2:#2b3553; --ink:#eceef5; --muted:#a9b1c8; --line:#36405f;
-  --brand:#6f7de0; --brand-deep:#3b469c; --brand-soft:#2f3866; --brand-2:#a3afef;
-  --on-bg:#ffffff; --on-bg-muted:#b9c3dd;
-  --good:#6fd3a0; --good-soft:#1d3a2c; --warn:#f2b46a; --warn-soft:#3b2c18;
+  --bg:#18203a; --card:#222b45; --tile:#2a3452; --ink:#eef0f6; --muted:#a8b0c7; --line:#36405f;
+  --brand:#7482e6; --brand-deep:#3a459e;
+  --c-google:#7482e6; --c-meta1:#eeac6a; --c-meta2:#a9baea;
+  --track:#323d5e;
+  --on-bg:#ffffff; --on-bg-muted:#b8c2dc;
+  --good:#6fd3a0; --good-soft:#1c3a2b; --warn:#f2b46a;
   color-scheme:dark}
 *{box-sizing:border-box}
-body{background:var(--bg);color:var(--ink);font-family:var(--font);font-size:15px;line-height:1.5}
-.wrap{max-width:1080px;margin:0 auto;padding-inline:16px;padding-block:24px 48px;display:grid;gap:20px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font-size:15px;line-height:1.5}
+.wrap{max-width:1120px;margin:0 auto;padding:28px 16px 56px;display:grid;gap:22px}
 .num{font-variant-numeric:tabular-nums}
-h1,h2,h3{margin:0;text-wrap:balance}
-.eyebrow{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em}
+h1,h2,h3,p{margin:0}
+h1,h2,h3{text-wrap:balance}
+.eyebrow{font-size:11.5px;font-weight:700;text-transform:uppercase;letter-spacing:.1em}
 
-.hero{color:var(--on-bg);display:grid;gap:22px;padding:8px 4px 0}
-.hero-top{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:12px}
+/* Hero */
+.hero{display:grid;gap:22px;color:var(--on-bg)}
+.hero-top{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:14px}
 .hero .eyebrow{color:var(--on-bg-muted)}
-.hero h1{font-size:clamp(28px,5vw,44px);font-weight:800;line-height:1.05;margin-top:6px;text-transform:uppercase;letter-spacing:-.01em}
-.period{font-size:14px;color:var(--on-bg-muted);font-weight:500}
-.kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
-.kpi{background:var(--surface);color:var(--ink);border-radius:22px;padding:18px 20px;display:grid;gap:4px;min-width:0}
-.kpi .label{font-size:13px;color:var(--muted);font-weight:600}
-.kpi .value{font-size:clamp(22px,3.2vw,30px);font-weight:800;line-height:1.1}
-.kpi .sub{font-size:12.5px;color:var(--muted)}
+.hero h1{font-size:clamp(30px,5.4vw,50px);font-weight:800;line-height:1.02;text-transform:uppercase;margin-top:8px;letter-spacing:-.01em}
+.period{display:inline-flex;gap:8px;align-items:center;background:rgba(255,255,255,.14);padding:9px 16px;border-radius:99px;font-size:13.5px;font-weight:600}
+.kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.kpi{background:var(--card);color:var(--ink);border-radius:24px;padding:20px 22px;display:grid;gap:6px;min-width:0}
+.kpi .label{font-size:12.5px;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.05em}
+.kpi .value{font-size:clamp(24px,3.3vw,34px);font-weight:800;line-height:1.05;white-space:nowrap}
+.kpi .sub{font-size:12.5px;color:var(--muted);font-weight:500}
+.kpi.feature{background:var(--brand);color:#fff}
+.kpi.feature .label,.kpi.feature .sub{color:rgba(255,255,255,.78)}
 
-.channels{display:grid;grid-template-columns:1fr 1.25fr;gap:20px;align-items:start}
-.panel{background:var(--surface);border-radius:28px;padding:24px clamp(18px,3vw,28px);display:grid;gap:18px;min-width:0}
-.panel-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
-.panel-head h2{font-size:22px;font-weight:800;text-transform:uppercase}
-.panel-head .eyebrow{color:var(--brand)}
-.pill{font-size:12px;font-weight:700;padding:6px 12px;border-radius:99px;white-space:nowrap;background:var(--brand);color:#fff}
-.pill.good{background:var(--good-soft);color:var(--good)}
-
-.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
-.stat{background:var(--surface-2);border-radius:16px;padding:12px 14px;min-width:0}
-.stat .label{font-size:12.5px;color:var(--muted);font-weight:600}
-.stat .value{font-weight:800;font-size:21px;line-height:1.2}
-.stat .hint{font-size:12px;color:var(--muted)}
-
-.camp{background:var(--surface-2);border-radius:18px;padding:16px 18px;display:grid;gap:12px}
-.camp-top{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap}
-.camp h3{font-size:15.5px;font-weight:700}
-.camp .tag{font-size:12px;color:var(--muted);font-weight:600}
-.camp-nums{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
-.camp-nums div{display:grid}
-.camp-nums span{font-size:12px;color:var(--muted);font-weight:600}
-.camp-nums b{font-size:19px;font-weight:800}
-
-.bars{display:grid;gap:10px}
-.bars h3{font-size:14px;font-weight:700}
-.bar-row{display:grid;grid-template-columns:120px 1fr 72px;gap:10px;align-items:center;font-size:13px}
-.track{height:14px;border-radius:99px;background:var(--brand-soft);overflow:hidden}
-.track i{display:block;height:100%;border-radius:99px;background:var(--brand)}
-.track.alt i{background:var(--brand-2)}
-.bar-row b{text-align:right;font-weight:800}
-
-.note{font-size:14px;color:var(--muted);margin:0;max-width:64ch}
+/* Cards */
+.card{background:var(--card);border-radius:30px;padding:26px clamp(18px,3vw,30px);display:grid;gap:20px;min-width:0;align-content:start}
+.card-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.card-head .eyebrow{color:var(--brand)}
+.card-head h2{font-size:clamp(19px,2.4vw,23px);font-weight:800;text-transform:uppercase;margin-top:4px}
+.pill{font-size:12px;font-weight:700;padding:6px 13px;border-radius:99px;white-space:nowrap;background:var(--good-soft);color:var(--good)}
+.pill.brand{background:var(--brand);color:#fff}
+.note{font-size:14px;color:var(--muted);max-width:62ch}
 .note strong{color:var(--ink)}
 
-.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
-.alert{border-radius:18px;padding:16px 18px;display:grid;gap:6px;align-content:start;background:var(--surface-2);min-width:0;border-left:5px solid var(--brand)}
-.alert .sev{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--brand)}
-.alert.warn{border-left-color:var(--warn)} .alert.warn .sev{color:var(--warn)}
-.alert.good{border-left-color:var(--good)} .alert.good .sev{color:var(--good)}
-.alert h3{font-size:16px;font-weight:700}
-.alert p{margin:0;font-size:14px;color:var(--muted)}
-.next{display:grid;gap:10px;margin:0;padding:0;list-style:none}
-.next li{display:flex;gap:12px;align-items:flex-start;font-size:14.5px}
-.check{flex:none;width:20px;height:20px;border:2px solid var(--brand);border-radius:6px;margin-top:1px}
-footer{font-size:12.5px;color:var(--on-bg-muted);text-align:center}
+.row{display:grid;gap:22px;grid-template-columns:1fr 1fr;align-items:stretch}
+.card.fill{grid-template-rows:auto auto 1fr auto;align-content:stretch}
+.card.center{grid-template-rows:auto 1fr;align-content:stretch}
+.card.center .donut-wrap{align-self:center}
 
-@media (max-width:860px){.channels{grid-template-columns:1fr}.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.cards{grid-template-columns:1fr}}
-@media (max-width:480px){.stats{grid-template-columns:1fr 1fr}.bar-row{grid-template-columns:96px 1fr 60px}}
+/* Legend */
+.swatch{display:inline-block;width:11px;height:11px;border-radius:4px;flex:none}
+.sw-g{background:var(--c-google)} .sw-m1{background:var(--c-meta1)} .sw-m2{background:var(--c-meta2)}
+
+/* Donut */
+.donut-wrap{display:grid;grid-template-columns:200px 1fr;gap:26px;align-items:center}
+.donut{position:relative;width:200px;height:200px}
+.donut svg{width:100%;height:100%;transform:rotate(-90deg)}
+.donut circle{fill:none;stroke-width:22}
+.donut .center{position:absolute;inset:0;display:grid;place-content:center;text-align:center}
+.donut .center b{font-size:17px;font-weight:800;line-height:1.1}
+.donut .center span{font-size:12px;color:var(--muted);font-weight:600}
+.legend{display:grid;gap:14px;list-style:none;margin:0;padding:0}
+.legend li{display:grid;grid-template-columns:auto 1fr auto;gap:10px;align-items:center;font-size:14px}
+.legend .who{display:grid}
+.legend .who strong{font-weight:700}
+.legend .who small{font-size:12px;color:var(--muted)}
+.legend .amt{text-align:right;display:grid}
+.legend .amt b{font-weight:800}
+.legend .amt small{font-size:12px;color:var(--muted)}
+
+/* Horizontal bar charts */
+.hchart{display:grid;gap:14px}
+.hchart h3{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.hbar{display:grid;grid-template-columns:132px 1fr 76px;gap:12px;align-items:center;font-size:13.5px;font-weight:600}
+.hbar .track{height:22px;border-radius:8px;background:var(--track);overflow:hidden}
+.hbar .track i{display:block;height:100%;border-radius:8px}
+.hbar b{text-align:right;font-weight:800;font-size:15px;white-space:nowrap}
+.fill-g{background:var(--c-google)} .fill-m1{background:var(--c-meta1)} .fill-m2{background:var(--c-meta2)}
+.divider{height:1px;background:var(--line)}
+
+/* Channel stats */
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.stat{background:var(--tile);border-radius:18px;padding:14px 16px;min-width:0}
+.stat .label{font-size:12px;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.04em}
+.stat .value{font-weight:800;font-size:clamp(18px,2.2vw,22px);line-height:1.25}
+
+/* Google dots */
+.dots-box{background:var(--tile);border-radius:20px;padding:22px;display:grid;gap:16px;align-content:center}
+.dots-box h3{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.dots{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;max-width:250px;width:100%;justify-self:center}
+.dots span{aspect-ratio:1;border-radius:50%;background:var(--c-google)}
+.dots-cap{font-size:13px;color:var(--muted)}
+.dots-cap b{color:var(--ink)}
+
+/* Meta campaigns */
+.camps{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.camp{background:var(--tile);border-radius:20px;padding:16px;display:grid;gap:10px;border-top:5px solid var(--c-meta1)}
+.camp.f{border-top-color:var(--c-meta2)}
+.camp h3{font-size:14.5px;font-weight:800}
+.camp .tag{font-size:12px;color:var(--muted);font-weight:600}
+.camp dl{margin:0;display:grid;gap:6px}
+.camp dl div{display:flex;justify-content:space-between;gap:8px;font-size:13px}
+.camp dt{color:var(--muted);font-weight:600}
+.camp dd{margin:0;font-weight:800}
+
+/* Stacked share */
+.share{background:var(--tile);border-radius:20px;padding:18px;display:grid;gap:12px}
+.share h3{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.srow{display:grid;grid-template-columns:76px 1fr;gap:12px;align-items:center;font-size:13px;font-weight:700}
+.stack{display:flex;height:28px;border-radius:9px;overflow:hidden;gap:3px}
+.stack i{display:flex;align-items:center;padding-inline:10px;font-style:normal;font-size:12px;font-weight:800;color:#1e2230;white-space:nowrap}
+.share-legend{display:flex;gap:16px;flex-wrap:wrap;font-size:12.5px;color:var(--muted);font-weight:600}
+.share-legend span{display:inline-flex;gap:6px;align-items:center}
+
+/* Next steps */
+.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.step{background:var(--tile);border-radius:22px;padding:20px;display:grid;gap:8px;align-content:start}
+.step .n{width:34px;height:34px;border-radius:50%;display:grid;place-content:center;font-weight:800;font-size:14px;background:var(--brand);color:#fff}
+.step .sev{font-size:11.5px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--brand)}
+.step.warn .sev{color:var(--warn)} .step.warn .n{background:var(--c-meta1);color:#1e2230}
+.step.good .sev{color:var(--good)} .step.good .n{background:var(--good);color:#fff}
+.step h3{font-size:16px;font-weight:800}
+.step p{font-size:14px;color:var(--muted)}
+
+footer{font-size:12.5px;color:var(--on-bg-muted);text-align:center;font-weight:500}
+
+@media (max-width:900px){
+  .row{grid-template-columns:1fr}
+  .kpis{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .steps{grid-template-columns:1fr}
+}
+@media (max-width:520px){
+  .donut-wrap{grid-template-columns:1fr;justify-items:center}
+  .legend{width:100%}
+  .hbar{grid-template-columns:92px 1fr 72px;font-size:12.5px;gap:8px}
+  .hbar b{font-size:13.5px}
+  .kpi{padding:16px}
+  .kpi .value{font-size:21px}
+  .camps{grid-template-columns:1fr}
+  .stats{grid-template-columns:1fr 1fr}
+}
 </style>
 </head>
 <body>
@@ -104,94 +173,140 @@ footer{font-size:12.5px;color:var(--on-bg-muted);text-align:center}
         <div class="eyebrow">Relatório semanal de tráfego pago</div>
         <h1>HL Bucomaxilo</h1>
       </div>
-      <div class="period">26 de setembro a 02 de outubro de 2026 · Google Ads e Meta Ads</div>
+      <div class="period">26/09 a 02/10/2026 · Google Ads e Meta Ads</div>
     </div>
     <div class="kpis">
-      <div class="kpi"><span class="label">Investimento total</span><span class="value num">R$ 1.084,83</span><span class="sub">Google R$ 518,00 · Meta R$ 566,83</span></div>
-      <div class="kpi"><span class="label">Contatos gerados</span><span class="value num">82</span><span class="sub">20 conversões · 29 leads · 33 mensagens</span></div>
-      <div class="kpi"><span class="label">Custo médio por contato</span><span class="value num">R$ 13,23</span><span class="sub">somando os dois canais</span></div>
-      <div class="kpi"><span class="label">Menor custo da semana</span><span class="value num">R$ 5,00</span><span class="sub">por lead · Meta, estrutura aberta</span></div>
+      <div class="kpi feature"><span class="label">Investimento</span><span class="value num">R$ 1.084,83</span><span class="sub">nos dois canais</span></div>
+      <div class="kpi"><span class="label">Contatos</span><span class="value num">82</span><span class="sub">conversões, leads e mensagens</span></div>
+      <div class="kpi"><span class="label">Custo médio</span><span class="value num">R$ 13,23</span><span class="sub">por contato</span></div>
+      <div class="kpi"><span class="label">Melhor custo</span><span class="value num">R$ 5,00</span><span class="sub">por lead no Meta</span></div>
     </div>
   </header>
 
-  <div class="channels">
+  <div class="row">
+    <section class="card center">
+      <div class="card-head">
+        <div><div class="eyebrow">Visão geral</div><h2>Para onde foi a verba</h2></div>
+      </div>
+      <div class="donut-wrap">
+        <div class="donut" role="img" aria-label="Google Ads 48%, Meta funil completo 39%, Meta campanha principal 13% do investimento">
+          <svg viewBox="0 0 200 200">
+            <circle cx="100" cy="100" r="70" stroke="var(--track)"></circle>
+            <circle cx="100" cy="100" r="70" stroke="var(--c-google)" stroke-dasharray="207.02 439.82" stroke-dashoffset="0"></circle>
+            <circle cx="100" cy="100" r="70" stroke="var(--c-meta2)" stroke-dasharray="167.95 439.82" stroke-dashoffset="-210.02"></circle>
+            <circle cx="100" cy="100" r="70" stroke="var(--c-meta1)" stroke-dasharray="55.85 439.82" stroke-dashoffset="-380.97"></circle>
+          </svg>
+          <div class="center"><b class="num">R$ 1.084,83</b><span>investidos</span></div>
+        </div>
+        <ul class="legend">
+          <li><span class="swatch sw-g"></span><span class="who"><strong>Google Ads</strong><small>Pesquisa</small></span><span class="amt"><b class="num">R$ 518,00</b><small>48%</small></span></li>
+          <li><span class="swatch sw-m2"></span><span class="who"><strong>Meta · Funil completo</strong><small>Mensagens</small></span><span class="amt"><b class="num">R$ 421,70</b><small>39%</small></span></li>
+          <li><span class="swatch sw-m1"></span><span class="who"><strong>Meta · Principal</strong><small>Estrutura aberta</small></span><span class="amt"><b class="num">R$ 145,13</b><small>13%</small></span></li>
+        </ul>
+      </div>
+    </section>
 
-    <section class="panel">
-      <div class="panel-head">
+    <section class="card">
+      <div class="card-head">
+        <div><div class="eyebrow">Por campanha</div><h2>Resultado e custo</h2></div>
+      </div>
+      <div class="hchart" role="img" aria-label="Contatos: Google 20, Meta principal 29, Meta funil 33">
+        <h3>Contatos gerados</h3>
+        <div class="hbar"><span>Google Ads</span><div class="track"><i class="fill-g" style="width:60.6%"></i></div><b class="num">20</b></div>
+        <div class="hbar"><span>Meta Principal</span><div class="track"><i class="fill-m1" style="width:87.9%"></i></div><b class="num">29</b></div>
+        <div class="hbar"><span>Meta Funil</span><div class="track"><i class="fill-m2" style="width:100%"></i></div><b class="num">33</b></div>
+      </div>
+      <div class="divider"></div>
+      <div class="hchart" role="img" aria-label="Custo por resultado: Google R$ 25,91, Meta principal R$ 5,00, Meta funil R$ 12,78">
+        <h3>Custo por resultado</h3>
+        <div class="hbar"><span>Google Ads</span><div class="track"><i class="fill-g" style="width:100%"></i></div><b class="num">R$ 25,91</b></div>
+        <div class="hbar"><span>Meta Principal</span><div class="track"><i class="fill-m1" style="width:19.3%"></i></div><b class="num">R$ 5,00</b></div>
+        <div class="hbar"><span>Meta Funil</span><div class="track"><i class="fill-m2" style="width:49.3%"></i></div><b class="num">R$ 12,78</b></div>
+      </div>
+    </section>
+  </div>
+
+  <div class="row">
+    <section class="card fill">
+      <div class="card-head">
         <div><div class="eyebrow">Canal</div><h2>Google Ads</h2></div>
-        <span class="pill good">Custo em queda</span>
+        <span class="pill">Custo em queda</span>
       </div>
       <div class="stats">
-        <div class="stat"><div class="label">Investimento</div><div class="value num">R$ 518,00</div></div>
+        <div class="stat"><div class="label">Investido</div><div class="value num">R$ 518,00</div></div>
         <div class="stat"><div class="label">Conversões</div><div class="value num">20</div></div>
         <div class="stat"><div class="label">Custo/conv.</div><div class="value num">R$ 25,91</div></div>
       </div>
-      <p class="note">O <strong>custo por conversão baixou</strong> na primeira semana de gestão, e as métricas da conta melhoraram no geral. Quem chega pelo Google já busca a extração do siso, por isso é um contato com intenção alta.</p>
+      <div class="dots-box">
+        <h3>20 conversões na semana</h3>
+        <div class="dots" role="img" aria-label="20 conversões">
+          <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <p class="dots-cap">Cada ponto é uma pessoa que <b>buscou pelo procedimento</b> e entrou em contato.</p>
+      </div>
+      <p class="note">O <strong>custo por conversão baixou</strong> já na primeira semana de gestão. As métricas da conta melhoraram no geral. É o contato com maior intenção, porque a pessoa já está procurando a extração.</p>
     </section>
 
-    <section class="panel">
-      <div class="panel-head">
+    <section class="card">
+      <div class="card-head">
         <div><div class="eyebrow">Canal</div><h2>Meta Ads</h2></div>
-        <span class="pill">Orçamento redistribuído</span>
+        <span class="pill brand">Verba redistribuída</span>
       </div>
-
-      <div class="camp">
-        <div class="camp-top"><h3>Campanha principal</h3><span class="tag">Estrutura aberta · Leads</span></div>
-        <div class="camp-nums">
-          <div><span>Investido</span><b class="num">R$ 145,13</b></div>
-          <div><span>Leads</span><b class="num">29</b></div>
-          <div><span>Custo/lead</span><b class="num">R$ 5,00</b></div>
+      <div class="stats">
+        <div class="stat"><div class="label">Investido</div><div class="value num">R$ 566,83</div></div>
+        <div class="stat"><div class="label">Contatos</div><div class="value num">62</div></div>
+        <div class="stat"><div class="label">Custo médio</div><div class="value num">R$ 9,14</div></div>
+      </div>
+      <div class="camps">
+        <div class="camp">
+          <h3>Campanha principal</h3><span class="tag">Estrutura aberta · Leads</span>
+          <dl>
+            <div><dt>Investido</dt><dd class="num">R$ 145,13</dd></div>
+            <div><dt>Leads</dt><dd class="num">29</dd></div>
+            <div><dt>Custo/lead</dt><dd class="num">R$ 5,00</dd></div>
+          </dl>
+        </div>
+        <div class="camp f">
+          <h3>Funil completo</h3><span class="tag">Mensagens</span>
+          <dl>
+            <div><dt>Investido</dt><dd class="num">R$ 421,70</dd></div>
+            <div><dt>Mensagens</dt><dd class="num">33</dd></div>
+            <div><dt>Custo/msg</dt><dd class="num">R$ 12,78</dd></div>
+          </dl>
         </div>
       </div>
-
-      <div class="camp">
-        <div class="camp-top"><h3>Funil completo</h3><span class="tag">Mensagens</span></div>
-        <div class="camp-nums">
-          <div><span>Investido</span><b class="num">R$ 421,70</b></div>
-          <div><span>Mensagens</span><b class="num">33</b></div>
-          <div><span>Custo/msg</span><b class="num">R$ 12,78</b></div>
-        </div>
+      <div class="share" role="img" aria-label="Campanha principal: 26% da verba e 47% dos contatos. Funil completo: 74% da verba e 53% dos contatos.">
+        <h3>Verba x contatos</h3>
+        <div class="srow"><span>Verba</span><div class="stack"><i class="fill-m1" style="width:25.6%">26%</i><i class="fill-m2" style="width:74.4%">74%</i></div></div>
+        <div class="srow"><span>Contatos</span><div class="stack"><i class="fill-m1" style="width:46.8%">47%</i><i class="fill-m2" style="width:53.2%">53%</i></div></div>
+        <div class="share-legend"><span><i class="swatch sw-m1"></i>Principal</span><span><i class="swatch sw-m2"></i>Funil completo</span></div>
       </div>
-
-      <div class="bars" role="img" aria-label="Campanha principal: 26% do investimento do Meta e 47% dos contatos. Funil completo: 74% do investimento e 53% dos contatos.">
-        <h3>Participação no Meta Ads</h3>
-        <div class="bar-row"><span>Principal · verba</span><div class="track"><i style="width:26%"></i></div><b class="num">26%</b></div>
-        <div class="bar-row"><span>Principal · contatos</span><div class="track alt"><i style="width:47%"></i></div><b class="num">47%</b></div>
-        <div class="bar-row"><span>Funil · verba</span><div class="track"><i style="width:74%"></i></div><b class="num">74%</b></div>
-        <div class="bar-row"><span>Funil · contatos</span><div class="track alt"><i style="width:53%"></i></div><b class="num">53%</b></div>
-      </div>
-
-      <p class="note">As estruturas foram mantidas por enquanto. Mais verba foi para o que trazia mais resultado e o <strong>custo por conversa baixou</strong>. A campanha principal entrega quase metade dos contatos com um quarto da verba.</p>
+      <p class="note">A campanha principal traz <strong>quase metade dos contatos com um quarto da verba</strong>. Mais orçamento foi para o que dava resultado e o custo por conversa baixou.</p>
     </section>
-
   </div>
 
-  <section class="panel">
-    <div class="panel-head">
+  <section class="card">
+    <div class="card-head">
       <div><div class="eyebrow">Próxima semana</div><h2>Próximos passos</h2></div>
     </div>
-    <div class="cards">
-      <div class="alert warn">
-        <span class="sev">Ajuste</span>
+    <div class="steps">
+      <div class="step warn">
+        <span class="n">1</span><span class="sev">Ajuste</span>
         <h3>Reduzir o funil completo</h3>
-        <p>Diminuir mais um pouco o investimento nessa campanha para baixar o custo por mensagem.</p>
+        <p>Diminuir mais um pouco a verba dessa campanha para baixar o custo por mensagem.</p>
       </div>
-      <div class="alert">
-        <span class="sev">Novo</span>
+      <div class="step">
+        <span class="n">2</span><span class="sev">Novo</span>
         <h3>Início do remarketing</h3>
         <p>A verba liberada vai para o remarketing, como combinado. Ele fala com quem já conheceu a clínica.</p>
       </div>
-      <div class="alert good">
-        <span class="sev">Manter</span>
-        <h3>Google Ads</h3>
-        <p>Seguir acompanhando a queda do custo por conversão e a qualidade dos contatos.</p>
+      <div class="step good">
+        <span class="n">3</span><span class="sev">Acompanhar</span>
+        <h3>Contatos x agenda</h3>
+        <p>Cruzar os contatos da semana com agendamentos e comparecimentos na reunião quinzenal.</p>
       </div>
     </div>
-    <ul class="next">
-      <li><span class="check" aria-hidden="true"></span>Redistribuir o orçamento do funil completo para o remarketing</li>
-      <li><span class="check" aria-hidden="true"></span>Subir as campanhas de remarketing no início da semana</li>
-      <li><span class="check" aria-hidden="true"></span>Cruzar os contatos da semana com agendamentos e comparecimentos na reunião quinzenal</li>
-    </ul>
   </section>
 
   <footer>Advance Digital · Relatório semanal HL Bucomaxilo · 26/09 a 02/10/2026</footer>
