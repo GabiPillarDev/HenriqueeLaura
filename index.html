@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>HL Bucomaxilo · Semana 02/10 a 08/10</title>
+<title>HL Bucomaxilo · Semana 09/10 a 15/10</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap">
 <style>
@@ -155,126 +155,229 @@ footer{font-size:12.5px;color:var(--on-bg-muted);text-align:center;font-weight:5
   .vbar{display:none!important}
   .ctable td,.ctable th{padding-left:8px;padding-right:8px}
 }
+
+.shift{background:var(--brand);color:#fff;border-radius:30px;padding:26px clamp(18px,3vw,30px);display:grid;gap:18px}
+.shift .eyebrow{color:rgba(255,255,255,.75)}
+.shift h2{font-size:clamp(19px,2.4vw,23px);font-weight:800;text-transform:uppercase;margin-top:4px}
+.shift p{color:rgba(255,255,255,.85);font-size:14.5px;max-width:75ch}
+.trio{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.tri{background:rgba(255,255,255,.12);border-radius:20px;padding:16px 18px;display:grid;gap:6px}
+.tri .label{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:rgba(255,255,255,.75)}
+.tri .ba{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.tri .ba s{color:rgba(255,255,255,.6);font-size:16px;font-weight:700;text-decoration:none}
+.tri .ba b{font-size:28px;font-weight:800}
+.tri .tagx{width:max-content;font-size:11.5px;font-weight:800;padding:3px 9px;border-radius:99px;background:#fff;color:var(--brand)}
+.tri .tagx.w{background:#f8ead9;color:#a85a0c}
+/* funil canal */
+.fun{display:grid;gap:12px}
+.fstep{display:grid;grid-template-columns:110px 1fr 86px;gap:12px;align-items:center;font-size:13.5px;font-weight:700}
+.fbars{display:grid;gap:3px}
+.fbars div{height:14px;border-radius:7px;background:var(--track);overflow:hidden}
+.fbars i{display:block;height:100%;border-radius:7px}
+.fbars .b i{background:#a3a9b8}
+.fbars .a i{background:var(--brand)}
+.fbars.meta .a i{background:var(--c-meta1)}
+.fstep .v{text-align:right;line-height:1.3}
+.fstep .v b{display:block;font-size:16px;font-weight:800}
+.fstep .v small{font-size:11.5px;color:var(--muted);font-weight:600}
+.rates{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.rate{background:var(--tile);border-radius:14px;padding:10px 12px;display:grid;gap:2px}
+.rate .label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
+.rate b{font-size:19px;font-weight:800}
+.rate small{font-size:11.5px;color:var(--muted);font-weight:600}
+.rate .up{color:var(--good)} .rate .dn{color:var(--warn)}
+/* agenda -> fechamento */
+.chain{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0}
+.link{background:var(--tile);padding:18px 16px;display:grid;gap:4px;position:relative}
+.link:first-child{border-radius:20px 0 0 20px}.link:last-child{border-radius:0 20px 20px 0}
+.link+.link{border-left:1px solid var(--line)}
+.link .label{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+.link .value{font-size:34px;font-weight:800;line-height:1.05}
+.link .pct{width:max-content;font-size:12px;font-weight:800;padding:3px 9px;border-radius:99px;background:var(--good-soft);color:var(--good)}
+.link.win{background:var(--good);color:#fff}.link.win .label{color:rgba(255,255,255,.85)}.link.win .pct{background:rgba(255,255,255,.2);color:#fff}
+.ctab{width:100%;border-collapse:separate;border-spacing:0 6px;font-size:13.5px}
+.ctab th{font-size:11.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;text-align:right;padding:0 12px;font-weight:700}
+.ctab th:first-child{text-align:left}
+.ctab td{background:var(--tile);padding:10px 12px;text-align:right;font-weight:700}
+.ctab td:first-child{text-align:left;border-radius:12px 0 0 12px}.ctab td:last-child{border-radius:0 12px 12px 0}
+/* cadencia */
+.hist{display:grid;gap:10px}
+.hrow{display:grid;grid-template-columns:96px 1fr 40px;gap:10px;align-items:center;font-size:13px;font-weight:600}
+.hrow .track{height:20px;border-radius:7px;background:var(--track);overflow:hidden}
+.hrow .track i{display:block;height:100%;background:var(--brand);border-radius:7px}
+.hrow .track i.g{background:var(--good)}
+.hrow b{text-align:right;font-weight:800}
+.big2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.big2 .t{background:var(--tile);border-radius:18px;padding:16px;display:grid;gap:2px}
+.big2 .t .label{font-size:11.5px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
+.big2 .t b{font-size:30px;font-weight:800;line-height:1.1}
+.big2 .t small{font-size:12px;color:var(--muted);font-weight:600}
+/* fechamentos outubro */
+.cohort{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.cbox{background:var(--tile);border-radius:22px;padding:18px;display:grid;gap:10px;align-content:start;border-top:6px solid var(--good)}
+.cbox.old{border-top-color:#a3a9b8}
+.cbox h3{font-size:15px;font-weight:800}
+.cbox .n{font-size:34px;font-weight:800;line-height:1}
+.cbox ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.cbox li{display:grid;grid-template-columns:1fr auto;gap:8px;font-size:13px;border-top:1px dashed var(--line);padding-top:6px}
+.cbox li span{font-weight:700}
+.cbox li small{color:var(--muted);font-weight:600;text-align:right}
+.agenda{display:grid;gap:8px;list-style:none;margin:0;padding:0}
+.agenda li{background:var(--tile);border-radius:14px;padding:10px 14px;display:grid;grid-template-columns:62px 1fr auto;gap:12px;align-items:center}
+.agenda .date{font-weight:800}
+.agenda .who{display:grid;font-size:13.5px;font-weight:700}
+.agenda .who small{font-size:12px;color:var(--muted);font-weight:600}
+.tg{font-size:11.5px;font-weight:700;padding:4px 10px;border-radius:99px;white-space:nowrap;background:var(--track);color:var(--ink)}
+.tg.neg{background:var(--warn-soft);color:var(--warn)}
+@media (max-width:900px){.trio,.cohort,.big2{grid-template-columns:1fr}.chain{grid-template-columns:1fr 1fr}.link{border-radius:0!important;border-left:0!important}.chain .link:nth-child(1){border-radius:20px 0 0 0!important}.chain .link:nth-child(2){border-radius:0 20px 0 0!important}.chain .link:nth-child(3){border-radius:0 0 0 20px!important}.chain .link:nth-child(4){border-radius:0 0 20px 0!important}}
+@media (max-width:620px){.fstep{grid-template-columns:86px 1fr 70px;gap:8px}.rates{grid-template-columns:1fr 1fr 1fr}.rate b{font-size:16px}.ctab .hs{display:none}}
+.link{min-width:0}.link .pct{width:auto;justify-self:start;max-width:100%;white-space:normal}
+@media (max-width:900px){.chain{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:620px){.ctab{font-size:12.5px}.ctab td,.ctab th{padding-left:8px;padding-right:8px}.link .value{font-size:28px}}
+.card>*,.card-head>div{min-width:0}.eyebrow,.card-head h2{overflow-wrap:anywhere}
 </style>
 </head>
 <body>
 
 <div class="wrap">
-
   <header class="hero">
     <div class="hero-top">
-      <div>
-        <div class="eyebrow">Relatório semanal de tráfego pago</div>
-        <h1>HL Bucomaxilo</h1>
-      </div>
-      <div class="period">02 a 08/10/2026 · Google Ads e Meta Ads</div>
+      <div><div class="eyebrow">Relatório semanal · tráfego e comercial</div><h1>HL Bucomaxilo</h1></div>
+      <div class="period">09 a 15/10/2026 · comparado com 02 a 08/10</div>
     </div>
     <div class="kpis">
-      <div class="kpi feature"><span class="label">Investimento</span><span class="value num">R$ 1.210,45</span><span class="sub">Meta R$ 425,38 · Google R$ 785,07</span></div>
-      <div class="kpi"><span class="label">Contatos</span><span class="value num">89</span><span class="sub">70 conversas no Meta · 19 conversões no Google</span></div>
-      <div class="kpi"><span class="label">Custo no Meta</span><span class="value num">R$ 6,08</span><span class="sub">por conversa · era R$ 9,14</span></div>
-      <div class="kpi"><span class="label">Melhor custo</span><span class="value num">R$ 3,48</span><span class="sub">por conversa · Estrutura aberta</span></div>
+      <div class="kpi"><span class="label">Investimento</span><span class="value num">R$ 840,90</span><span class="sub">Meta R$ 406,44 · Google R$ 434,46</span></div>
+      <div class="kpi"><span class="label">Taxa de resposta</span><span class="value num">53%</span><span class="sub">leads de anúncio · era 42%</span></div>
+      <div class="kpi"><span class="label">Agendamentos</span><span class="value num">5</span><span class="sub">vindos de anúncio · era 1</span></div>
+      <div class="kpi feature"><span class="label">Custo por agendamento</span><span class="value num">R$ 168</span><span class="sub">era R$ 1.210</span></div>
     </div>
   </header>
 
+  <section class="shift">
+    <div><div class="eyebrow">A mudança da semana</div><h2>Menos volume, mais qualidade</h2></div>
+    <p>Retiramos as campanhas que traziam muitos contatos sem intenção real de tratamento. Como esperado, o custo por lead subiu e o volume caiu. Em troca, mais gente respondeu e o número de agendamentos cresceu.</p>
+    <div class="trio">
+      <div class="tri"><span class="label">Custo por lead (plataformas)</span><div class="ba"><s class="num">R$ 13,60</s><b class="num">R$ 16,17</b></div><span class="tagx w">subiu 19%</span></div>
+      <div class="tri"><span class="label">Leads de anúncio na planilha</span><div class="ba"><s class="num">60</s><b class="num">40</b></div><span class="tagx w">caiu 33%</span></div>
+      <div class="tri"><span class="label">Agendamentos de anúncio</span><div class="ba"><s class="num">1</s><b class="num">5</b></div><span class="tagx">5x mais</span></div>
+    </div>
+  </section>
+
   <div class="row">
     <section class="card">
-      <div class="card-head">
-        <div><div class="eyebrow">Canal</div><h2>Meta Ads</h2></div>
-        <span class="pill">Custo por conversa caiu 33%</span>
+      <div class="card-head"><div><div class="eyebrow">Funil por canal · pela data de entrada do lead</div><h2>Meta Ads</h2></div><span class="pill">Agendamento 0% → 7%</span></div>
+      <div class="legend"><span><i class="sw" style="background:#a3a9b8"></i>02 a 08/10</span><span><i class="sw" style="background:var(--c-meta1)"></i>09 a 15/10</span></div>
+      <div class="fun"><div class="fstep"><span>Leads</span><div class="fbars meta"><div class="b"><i style="width:100.0%"></i></div><div class="a"><i style="width:52.8%"></i></div></div><div class="v"><b class="num">28</b><small class="num">antes 53</small></div></div><div class="fstep"><span>Responderam</span><div class="fbars meta"><div class="b"><i style="width:37.7%"></i></div><div class="a"><i style="width:20.8%"></i></div></div><div class="v"><b class="num">11</b><small class="num">antes 20</small></div></div><div class="fstep"><span>Agendaram</span><div class="fbars meta"><div class="b"><i style="width:0.0%"></i></div><div class="a"><i style="width:3.8%"></i></div></div><div class="v"><b class="num">2</b><small class="num">antes 0</small></div></div></div>
+      <div class="rates">
+        <div class="rate"><span class="label">Resposta</span><b class="num">39%</b><small>era 38%</small></div>
+        <div class="rate"><span class="label">Lead → agend.</span><b class="num up">7%</b><small>era 0%</small></div>
+        <div class="rate"><span class="label">Custo/agend.</span><b class="num">R$ 203</b><small>sem agend. antes</small></div>
       </div>
-      <div class="stats">
-        <div class="stat"><div class="label">Investido</div><div class="value num">R$ 425,38</div></div>
-        <div class="stat"><div class="label">Conversas</div><div class="value num">70</div></div>
-        <div class="stat"><div class="label">Custo/conversa</div><div class="value num">R$ 6,08</div></div>
-      </div>
-      <div class="camps">
-        <div class="camp">
-          <div><h3>Estrutura aberta</h3><span class="tag">Público amplo</span></div>
-          <div class="cpr"><b class="num">R$ 3,48</b><small>por conversa</small></div>
-          <div class="line"><span>Investido <b class="num">R$ 208,74</b></span><span>Conversas <b class="num">60</b></span><span class="chg up">era R$ 5,00</span></div>
-        </div>
-        <div class="camp f">
-          <div><h3>Funil completo</h3><span class="tag">Público frio</span></div>
-          <div class="cpr"><b class="num">R$ 21,19</b><small>por conversa</small></div>
-          <div class="line"><span>Investido <b class="num">R$ 211,92</b></span><span>Conversas <b class="num">10</b></span><span class="chg down">era R$ 12,78</span></div>
-        </div>
-        <div class="camp r">
-          <div><h3>Remarketing</h3><span class="tag">Conteúdos · início da veiculação</span></div>
-          <div class="cpr"><b class="num">R$ 4,72</b><small>investido</small></div>
-          <div class="line"><span>Público de quem já interagiu com a clínica</span><span class="chg new">Nova</span></div>
-        </div>
-      </div>
-      <p class="note">A verba foi equilibrada entre as duas campanhas. A <strong>Estrutura aberta trouxe 6 em cada 7 conversas</strong>, com o menor custo desde o início da gestão.</p>
+      <p class="note">Na plataforma: <strong>33 conversas a R$ 12,32</strong> (eram 70 a R$ 6,08). O Funil completo concentrou a verba: 17 conversas a R$ 19,68.</p>
     </section>
-
-    <section class="card spread">
-      <div class="card-head">
-        <div><div class="eyebrow">Canal</div><h2>Google Ads</h2></div>
-        <span class="pill warn">Em recalibração</span>
+    <section class="card">
+      <div class="card-head"><div><div class="eyebrow">Funil por canal · pela data de entrada do lead</div><h2>Google Ads</h2></div><span class="pill">Agendamento 14% → 25%</span></div>
+      <div class="legend"><span><i class="sw" style="background:#a3a9b8"></i>02 a 08/10</span><span><i class="sw" style="background:var(--brand)"></i>09 a 15/10</span></div>
+      <div class="fun"><div class="fstep"><span>Leads</span><div class="fbars"><div class="b"><i style="width:58.3%"></i></div><div class="a"><i style="width:100.0%"></i></div></div><div class="v"><b class="num">12</b><small class="num">antes 7</small></div></div><div class="fstep"><span>Responderam</span><div class="fbars"><div class="b"><i style="width:41.7%"></i></div><div class="a"><i style="width:83.3%"></i></div></div><div class="v"><b class="num">10</b><small class="num">antes 5</small></div></div><div class="fstep"><span>Agendaram</span><div class="fbars"><div class="b"><i style="width:8.3%"></i></div><div class="a"><i style="width:25.0%"></i></div></div><div class="v"><b class="num">3</b><small class="num">antes 1</small></div></div></div>
+      <div class="rates">
+        <div class="rate"><span class="label">Resposta</span><b class="num up">83%</b><small>era 71%</small></div>
+        <div class="rate"><span class="label">Lead → agend.</span><b class="num up">25%</b><small>era 14%</small></div>
+        <div class="rate"><span class="label">Custo/agend.</span><b class="num">R$ 145</b><small>era R$ 785</small></div>
       </div>
-      <div class="stats">
-        <div class="stat"><div class="label">Investido</div><div class="value num">R$ 785,07</div></div>
-        <div class="stat"><div class="label">Conversões</div><div class="value num">19</div></div>
-        <div class="stat"><div class="label">Custo/conv.</div><div class="value num">R$ 41,32</div></div>
-      </div>
-      <div class="stats">
-        <div class="stat"><div class="label">Cliques</div><div class="value num">141</div></div>
-        <div class="stat"><div class="label">CTR</div><div class="value num">5,68%</div></div>
-        <div class="stat"><div class="label">Taxa de conv.</div><div class="value num">13,5%</div></div>
-      </div>
-      <div class="vs" role="img" aria-label="Custo por conversão no Google: semana anterior R$ 25,91, esta semana R$ 41,32">
-        <h3>Custo por conversão</h3>
-        <div class="vrow"><span>Semana anterior</span><div class="vbars"><div class="b"><i style="width:62.7%"></i></div></div><div class="vals"><b class="num">R$ 25,91</b></div></div>
-        <div class="vrow"><span>Esta semana</span><div class="vbars"><div class="a"><i style="width:100%"></i></div></div><div class="vals"><b class="num">R$ 41,32</b></div></div>
-      </div>
-      <p class="note">Semana de <strong>ajuste nas palavras-chave</strong> para buscar contatos com mais intenção de cirurgia. A campanha está em período de recalibração e o custo tende a se normalizar nos próximos dias. Dados do Google de 01 a 09/10.</p>
+      <p class="note">Na plataforma: <strong>19 conversões a R$ 22,87</strong> (eram 19 a R$ 41,32). A taxa de conversão subiu de 13,5% para 20,9%.</p>
     </section>
   </div>
 
   <section class="card">
-    <div class="card-head">
-      <div><div class="eyebrow">Histórico · maio a outubro de 2026</div><h2>Criativos x vendas</h2></div>
-      <span class="pill">Fonte: planilha de leads</span>
+    <div class="card-head"><div><div class="eyebrow">Leads que entraram desde 26/09 · consultas até 15/10</div><h2>Do agendamento ao fechamento</h2></div><span class="pill">75% de fechamento na consulta</span></div>
+    <div class="chain">
+      <div class="link"><span class="label">Agendaram</span><span class="value num">10</span><span class="pct">consultas já ocorridas</span></div>
+      <div class="link"><span class="label">Compareceram</span><span class="value num">8</span><span class="pct">80%</span></div>
+      <div class="link"><span class="label">Em negociação</span><span class="value num">2</span><span class="pct">25%</span></div>
+      <div class="link win"><span class="label">Fecharam</span><span class="value num">6</span><span class="pct">75% de quem compareceu</span></div>
     </div>
-    <div class="scroll">
-      <table class="ctable">
-        <thead><tr><th>Criativo (Meta)</th><th>Leads</th><th class="hide-sm">Agend.</th><th class="hide-sm">Compar.</th><th>Vendas</th><th>Lead → venda</th><th class="hide-sm">Meses com venda</th></tr></thead>
-        <tbody>
-          <tr class="top"><td class="cre"><b>Medo</b><small>Funil completo · Ato 2</small></td><td class="num">269</td><td class="num hide-sm">12</td><td class="num hide-sm">5</td><td><div class="vcell"><span class="vbar"><i style="width:100%"></i></span><span class="num">4</span></div></td><td><div class="vcell"><span class="vbar rate"><i style="width:60%"></i></span><span class="num">1,5%</span></div></td><td class="hide-sm"><div class="months"><span>mai 1</span><span>jun 2</span><span>jul 1</span></div></td></tr>
-          <tr><td class="cre"><b>Parestesia</b><small>Funil completo · Ato 3</small></td><td class="num">204</td><td class="num hide-sm">9</td><td class="num hide-sm">5</td><td><div class="vcell"><span class="vbar"><i style="width:50%"></i></span><span class="num">2</span></div></td><td><div class="vcell"><span class="vbar rate"><i style="width:40%"></i></span><span class="num">1,0%</span></div></td><td class="hide-sm"><div class="months"><span>ago 1</span><span>set 1</span></div></td></tr>
-          <tr><td class="cre"><b>Siso perto do nervo</b><small>Funil completo · Esteira</small></td><td class="num">80</td><td class="num hide-sm">3</td><td class="num hide-sm">3</td><td><div class="vcell"><span class="vbar"><i style="width:50%"></i></span><span class="num">2</span></div></td><td><div class="vcell"><span class="vbar rate"><i style="width:100%"></i></span><span class="num">2,5%</span></div></td><td class="hide-sm"><div class="months"><span>jun 1</span><span>jul 1</span></div></td></tr>
-          <tr><td class="cre"><b>Siso perto do NERVO!</b><small>Laura</small></td><td class="num">92</td><td class="num hide-sm">4</td><td class="num hide-sm">0</td><td><div class="vcell"><span class="vbar"><i style="width:0"></i></span><span class="num muted">0</span></div></td><td><div class="vcell"><span class="vbar rate"><i style="width:0"></i></span><span class="num muted">0%</span></div></td><td class="hide-sm"><span class="muted">sem venda</span></td></tr>
-          <tr><td class="cre"><b>Super Ads</b><small>Laura e Henrique</small></td><td class="num">34</td><td class="num hide-sm">0</td><td class="num hide-sm">0</td><td><div class="vcell"><span class="vbar"><i style="width:0"></i></span><span class="num muted">0</span></div></td><td><div class="vcell"><span class="vbar rate"><i style="width:0"></i></span><span class="num muted">0%</span></div></td><td class="hide-sm"><span class="muted">sem venda</span></td></tr>
-          <tr><td class="cre"><b>2 Especialistas</b><small>Henrique + Laura · novo</small></td><td class="num">16</td><td class="num hide-sm">0</td><td class="num hide-sm">0</td><td><div class="vcell"><span class="vbar"><i style="width:0"></i></span><span class="num muted">0</span></div></td><td><div class="vcell"><span class="vbar rate"><i style="width:0"></i></span><span class="num muted">0%</span></div></td><td class="hide-sm"><span class="muted">sem venda</span></td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div>
-      <div class="eyebrow" style="color:var(--muted);margin-bottom:10px">Outras origens no mesmo período</div>
-      <div class="others">
-        <div class="other"><span class="label">Google Ads</span><span class="value num">17 vendas</span><small>248 leads · 6,9% viram venda</small></div>
-        <div class="other"><span class="label">Meta sem identificação</span><span class="value num">13 vendas</span><small>23 leads · sem criativo registrado</small></div>
-        <div class="other"><span class="label">BIO Instagram</span><span class="value num">8 vendas</span><small>140 leads · 5,7% viram venda</small></div>
-      </div>
-    </div>
-
-    <p class="note">O <strong>Medo</strong> é o criativo que mais vendeu no período. O <strong>Siso perto do nervo</strong> tem a melhor conversão de lead em venda. As 13 vendas do Meta sem identificação chegaram sem a mensagem do anúncio, por isso não aparecem por criativo.</p>
+    <table class="ctab">
+      <thead><tr><th>Origem</th><th>Agend.</th><th>Compar.</th><th class="hs">Negoc.</th><th>Fech.</th></tr></thead>
+      <tbody>
+        <tr><td>Meta Ads</td><td class="num">4</td><td class="num">4</td><td class="num hs">1</td><td class="num">3</td></tr>
+        <tr><td>Google Ads</td><td class="num">3</td><td class="num">2</td><td class="num hs">1</td><td class="num">1</td></tr>
+        <tr><td>Instagram orgânico</td><td class="num">1</td><td class="num">1</td><td class="num hs">0</td><td class="num">1</td></tr>
+        <tr><td>Indicação</td><td class="num">1</td><td class="num">1</td><td class="num hs">0</td><td class="num">1</td></tr>
+        <tr><td>Sem identificação</td><td class="num">1</td><td class="num">0</td><td class="num hs">0</td><td class="num">0</td></tr>
+      </tbody>
+    </table>
+    <p class="note">O Meta fechou 3 de 4 agendamentos. A consulta da Silvana (Google, 06/10) ainda está sem status na planilha e não entrou na conta.</p>
   </section>
 
   <section class="card">
-    <div class="card-head">
-      <div><div class="eyebrow">Próxima semana</div><h2>Próximos passos</h2></div>
+    <div class="card-head"><div><div class="eyebrow">Cadência · leads de setembro e outubro</div><h2>Quanto tempo leva</h2></div></div>
+    <div class="big2">
+      <div class="t"><span class="label">Do lead até a consulta</span><b class="num">6 dias</b><small>mediana · 68% em até 7 dias (44 consultas)</small></div>
+      <div class="t"><span class="label">Do lead até o fechamento</span><b class="num">5 dias</b><small>mediana · 76% em até 7 dias (21 fechamentos)</small></div>
     </div>
+    <div class="row">
+      <div class="hist" role="img" aria-label="Dias do lead até a consulta"><div class="eyebrow" style="color:var(--muted)">Dias até a consulta</div><div class="hrow"><span>até 2 dias</span><div class="track"><i class="" style="width:57.9%"></i></div><b class="num">11</b></div><div class="hrow"><span>3 a 7 dias</span><div class="track"><i class="" style="width:100.0%"></i></div><b class="num">19</b></div><div class="hrow"><span>8 a 14 dias</span><div class="track"><i class="" style="width:52.6%"></i></div><b class="num">10</b></div><div class="hrow"><span>15 a 30 dias</span><div class="track"><i class="" style="width:15.8%"></i></div><b class="num">3</b></div><div class="hrow"><span>mais de 30</span><div class="track"><i class="" style="width:5.3%"></i></div><b class="num">1</b></div></div>
+      <div class="hist" role="img" aria-label="Dias do lead até o fechamento"><div class="eyebrow" style="color:var(--muted)">Dias até o fechamento</div><div class="hrow"><span>até 2 dias</span><div class="track"><i class="g" style="width:100.0%"></i></div><b class="num">8</b></div><div class="hrow"><span>3 a 7 dias</span><div class="track"><i class="g" style="width:100.0%"></i></div><b class="num">8</b></div><div class="hrow"><span>8 a 14 dias</span><div class="track"><i class="g" style="width:37.5%"></i></div><b class="num">3</b></div><div class="hrow"><span>15 a 30 dias</span><div class="track"><i class="g" style="width:0.0%"></i></div><b class="num">0</b></div><div class="hrow"><span>mais de 30</span><div class="track"><i class="g" style="width:25.0%"></i></div><b class="num">2</b></div></div>
+    </div>
+    <p class="note">O fechamento acontece, na maioria das vezes, <strong>na própria consulta</strong>. A maior parte das vendas sai na primeira semana do lead. Ainda assim, 2 pacientes fecharam depois de mais de 45 dias, o que mostra o valor do follow-up.</p>
+  </section>
+
+  <section class="card">
+    <div class="card-head"><div><div class="eyebrow">Fechamentos registrados em outubro</div><h2>Separados pela data de entrada do lead</h2></div><span class="pill">11 fechamentos</span></div>
+    <div class="cohort">
+      <div class="cbox"><h3>Leads da nova gestão (desde 26/09)</h3><span class="n num">5</span>
+        <ul>
+          <li><span>Naiara</span><small>Meta · lead 30/09 · consulta 02/10</small></li>
+          <li><span>Rebeca</span><small>Meta · lead 30/09 · consulta 07/10</small></li>
+          <li><span>Dayane</span><small>Google · lead 30/09 · consulta 06/10</small></li>
+          <li><span>Bryan</span><small>Instagram · lead 26/09 · consulta 06/10</small></li>
+          <li><span>Sarah Cristina</span><small>Indicação · lead 07/10 · consulta 09/10</small></li>
+        </ul>
+      </div>
+      <div class="cbox old"><h3>Leads anteriores que voltaram</h3><span class="n num">6</span>
+        <ul>
+          <li><span>Roger</span><small>lead 30/08 · consulta 15/10</small></li>
+          <li><span>Sarah Louise</span><small>lead 18/08 · consulta 07/10</small></li>
+          <li><span>Esdras</span><small>Google · lead 21/07</small></li>
+          <li><span>Yasmin</span><small>Google · lead 13/07</small></li>
+          <li><span>Carolina e Larissa</span><small>leads de 2025</small></li>
+        </ul>
+      </div>
+    </div>
+    <p class="note">Somando a Raphaela (Meta, fechou em 30/09), são <strong>4 fechamentos vindos de anúncio</strong> entre os leads que entraram desde o início da gestão.</p>
+  </section>
+
+  <div class="row">
+    <section class="card">
+      <div class="card-head"><div><div class="eyebrow">Próximas consultas</div><h2>Agenda e negociações</h2></div></div>
+      <ul class="agenda">
+        <li><span class="date num">16/10</span><span class="who">Tayrine<small>Meta · lead 14/10</small></span><span class="tg">Agendada</span></li>
+        <li><span class="date num">19/10</span><span class="who">Aline<small>Google · lead 13/10</small></span><span class="tg">Agendada</span></li>
+        <li><span class="date num">22/10</span><span class="who">Eder<small>Meta · lead 09/10</small></span><span class="tg">Agendada</span></li>
+        <li><span class="date num">23/10</span><span class="who">Graciele<small>Google · lead 13/10</small></span><span class="tg">Agendada</span></li>
+        <li><span class="date num">02/12</span><span class="who">Raquel<small>Instagram · lead 14/10</small></span><span class="tg">Agendada</span></li>
+        <li><span class="date">Aberto</span><span class="who">Bruna, Beatriz e Ernani<small>Meta, Google e Google</small></span><span class="tg neg">Em negociação</span></li>
+      </ul>
+    </section>
+    <section class="card spread">
+      <div class="card-head"><div><div class="eyebrow">Nas conversas da semana</div><h2>O que travou</h2></div></div>
+      <div class="hchart">
+        <div class="hist"><div class="hrow"><span>Convênio</span><div class="track"><i class="" style="width:100.0%"></i></div><b class="num">6</b></div><div class="hrow"><span>ATM / DTM</span><div class="track"><i class="" style="width:33.3%"></i></div><b class="num">2</b></div><div class="hrow"><span>Distância</span><div class="track"><i class="" style="width:33.3%"></i></div><b class="num">2</b></div><div class="hrow"><span>Outros proced.</span><div class="track"><i class="" style="width:16.7%"></i></div><b class="num">1</b></div></div>
+      </div>
+      <p class="note">Convênio segue como principal objeção, vinda de contatos sem identificação (4) e do Meta (2). Dois leads do Google moram fora de BH (Ibirité e Conceição do Mato Dentro).</p>
+    </section>
+  </div>
+
+  <section class="card">
+    <div class="card-head"><div><div class="eyebrow">Próxima semana</div><h2>Próximos passos</h2></div></div>
     <div class="steps">
-      <div class="step"><span class="n">1</span><h3>Estabilizar o Google</h3><p>Manter a campanha sem novas alterações por alguns dias para concluir a recalibração.</p></div>
-      <div class="step"><span class="n">2</span><h3>Remarketing rodando</h3><p>Acompanhar as primeiras conversas da campanha de remarketing com quem já conhece a clínica.</p></div>
-      <div class="step"><span class="n">3</span><h3>Criativos que vendem</h3><p>Usar o histórico de vendas por criativo para orientar as próximas peças e a distribuição da verba.</p></div>
+      <div class="step"><span class="n">1</span><h3>Manter a nova estrutura</h3><p>Dar tempo para as campanhas estabilizarem e confirmar a melhora na qualidade com mais uma semana de dados.</p></div>
+      <div class="step"><span class="n">2</span><h3>Follow-up ativo</h3><p>A maioria fecha em até 7 dias, mas há fechamentos depois de 45 dias. Vale retomar quem não respondeu e quem está em negociação.</p></div>
+      <div class="step"><span class="n">3</span><h3>Atualizar a planilha</h3><p>Preencher comparecimento e fechamento logo após cada consulta para medirmos o resultado real de cada canal.</p></div>
     </div>
   </section>
 
-  <footer>Advance Digital · Relatório semanal HL Bucomaxilo · 02 a 08/10/2026</footer>
+  <footer>Advance Digital · HL Bucomaxilo · Meta Ads, Google Ads e planilha de atendimentos · 09 a 15/10/2026</footer>
 </div>
 </body>
 </html>
