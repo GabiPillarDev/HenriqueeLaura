@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>HL Bucomaxilo · Semana 09/10 a 15/10</title>
+<title>HL Bucomaxilo · Outubro 2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap">
 <style>
@@ -235,6 +235,31 @@ footer{font-size:12.5px;color:var(--on-bg-muted);text-align:center;font-weight:5
 @media (max-width:900px){.chain{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:620px){.ctab{font-size:12.5px}.ctab td,.ctab th{padding-left:8px;padding-right:8px}.link .value{font-size:28px}}
 .card>*,.card-head>div{min-width:0}.eyebrow,.card-head h2{overflow-wrap:anywhere}
+
+.vcols{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;align-items:end;height:220px;border-bottom:1px solid var(--line);padding-top:24px}
+.vc{display:flex;flex-direction:column;justify-content:flex-end;align-items:center;height:100%;gap:6px}
+.vc b{font-size:18px;font-weight:800}
+.vc i{display:block;width:100%;max-width:90px;border-radius:12px 12px 4px 4px;background:#a3a9b8}
+.vc.g i{background:var(--good)}
+.vlabels{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;text-align:center;font-size:12.5px;font-weight:700;color:var(--muted)}
+.vlabels small{display:block;font-weight:600;font-size:11px}
+.lines{display:grid;gap:12px}
+.lrow{display:grid;grid-template-columns:140px repeat(3,1fr);gap:8px;align-items:center;font-size:13px;font-weight:700}
+.lrow.h{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+.lrow .c{background:var(--tile);border-radius:12px;padding:10px;text-align:center}
+.lrow .c b{display:block;font-size:17px;font-weight:800}
+.lrow .c small{font-size:11px;color:var(--muted);font-weight:600}
+.lrow .c.best{outline:2px solid var(--good)}
+@media (max-width:620px){.lrow{grid-template-columns:76px repeat(3,1fr);gap:6px}.lrow .c b{font-size:14px}.vcols,.vlabels{gap:6px}}
+.stat .value{white-space:nowrap;font-size:clamp(16px,1.9vw,21px)}
+.acts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.act{background:var(--tile);border-radius:22px;padding:20px;display:grid;gap:8px;align-content:start;border-top:6px solid var(--c-meta1)}
+.act.g{border-top-color:var(--brand)}
+.act .when{font-size:11.5px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.act h3{font-size:16px;font-weight:800}
+.act p{font-size:14px;color:var(--muted)}
+.act .res{font-size:13px;font-weight:700;color:var(--good);background:var(--good-soft);border-radius:12px;padding:8px 12px}
+@media (max-width:900px){.acts{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -242,142 +267,108 @@ footer{font-size:12.5px;color:var(--on-bg-muted);text-align:center;font-weight:5
 <div class="wrap">
   <header class="hero">
     <div class="hero-top">
-      <div><div class="eyebrow">Relatório semanal · tráfego e comercial</div><h1>HL Bucomaxilo</h1></div>
-      <div class="period">09 a 15/10/2026 · comparado com 02 a 08/10</div>
+      <div><div class="eyebrow">Relatório mensal · tráfego e comercial</div><h1>HL Bucomaxilo · Outubro</h1></div>
+      <div class="period">01 a 21/10/2026 · Google Ads, Meta Ads e planilha</div>
     </div>
     <div class="kpis">
-      <div class="kpi"><span class="label">Investimento</span><span class="value num">R$ 840,90</span><span class="sub">Meta R$ 406,44 · Google R$ 434,46</span></div>
-      <div class="kpi"><span class="label">Taxa de resposta</span><span class="value num">53%</span><span class="sub">leads de anúncio · era 42%</span></div>
-      <div class="kpi"><span class="label">Agendamentos</span><span class="value num">5</span><span class="sub">vindos de anúncio · era 1</span></div>
-      <div class="kpi feature"><span class="label">Custo por agendamento</span><span class="value num">R$ 168</span><span class="sub">era R$ 1.210</span></div>
+      <div class="kpi"><span class="label">Investimento</span><span class="value num">R$ 3.068,51</span><span class="sub">Google R$ 1.737,37 · Meta R$ 1.331,14</span></div>
+      <div class="kpi"><span class="label">Contatos</span><span class="value num">209</span><span class="sub">153 conversas Meta · 56 conversões Google</span></div>
+      <div class="kpi feature"><span class="label">Fechamentos no mês</span><span class="value num">15</span><span class="sub">pela data da consulta</span></div>
+      <div class="kpi"><span class="label">De leads da gestão</span><span class="value num">8</span><span class="sub">leads que entraram desde 26/09</span></div>
     </div>
   </header>
 
-  <section class="shift">
-    <div><div class="eyebrow">A mudança da semana</div><h2>Menos volume, mais qualidade</h2></div>
-    <p>Retiramos as campanhas que traziam muitos contatos sem intenção real de tratamento. Como esperado, o custo por lead subiu e o volume caiu. Em troca, mais gente respondeu e o número de agendamentos cresceu.</p>
-    <div class="trio">
-      <div class="tri"><span class="label">Custo por lead (plataformas)</span><div class="ba"><s class="num">R$ 13,60</s><b class="num">R$ 16,17</b></div><span class="tagx w">subiu 19%</span></div>
-      <div class="tri"><span class="label">Leads de anúncio na planilha</span><div class="ba"><s class="num">60</s><b class="num">40</b></div><span class="tagx w">caiu 33%</span></div>
-      <div class="tri"><span class="label">Agendamentos de anúncio</span><div class="ba"><s class="num">1</s><b class="num">5</b></div><span class="tagx">5x mais</span></div>
-    </div>
-  </section>
-
-  <div class="row">
-    <section class="card">
-      <div class="card-head"><div><div class="eyebrow">Funil por canal · pela data de entrada do lead</div><h2>Meta Ads</h2></div><span class="pill">Agendamento 0% → 7%</span></div>
-      <div class="legend"><span><i class="sw" style="background:#a3a9b8"></i>02 a 08/10</span><span><i class="sw" style="background:var(--c-meta1)"></i>09 a 15/10</span></div>
-      <div class="fun"><div class="fstep"><span>Leads</span><div class="fbars meta"><div class="b"><i style="width:100.0%"></i></div><div class="a"><i style="width:52.8%"></i></div></div><div class="v"><b class="num">28</b><small class="num">antes 53</small></div></div><div class="fstep"><span>Responderam</span><div class="fbars meta"><div class="b"><i style="width:37.7%"></i></div><div class="a"><i style="width:20.8%"></i></div></div><div class="v"><b class="num">11</b><small class="num">antes 20</small></div></div><div class="fstep"><span>Agendaram</span><div class="fbars meta"><div class="b"><i style="width:0.0%"></i></div><div class="a"><i style="width:3.8%"></i></div></div><div class="v"><b class="num">2</b><small class="num">antes 0</small></div></div></div>
-      <div class="rates">
-        <div class="rate"><span class="label">Resposta</span><b class="num">39%</b><small>era 38%</small></div>
-        <div class="rate"><span class="label">Lead → agend.</span><b class="num up">7%</b><small>era 0%</small></div>
-        <div class="rate"><span class="label">Custo/agend.</span><b class="num">R$ 203</b><small>sem agend. antes</small></div>
-      </div>
-      <p class="note">Na plataforma: <strong>33 conversas a R$ 12,32</strong> (eram 70 a R$ 6,08). O Funil completo concentrou a verba: 17 conversas a R$ 19,68.</p>
-    </section>
-    <section class="card">
-      <div class="card-head"><div><div class="eyebrow">Funil por canal · pela data de entrada do lead</div><h2>Google Ads</h2></div><span class="pill">Agendamento 14% → 25%</span></div>
-      <div class="legend"><span><i class="sw" style="background:#a3a9b8"></i>02 a 08/10</span><span><i class="sw" style="background:var(--brand)"></i>09 a 15/10</span></div>
-      <div class="fun"><div class="fstep"><span>Leads</span><div class="fbars"><div class="b"><i style="width:58.3%"></i></div><div class="a"><i style="width:100.0%"></i></div></div><div class="v"><b class="num">12</b><small class="num">antes 7</small></div></div><div class="fstep"><span>Responderam</span><div class="fbars"><div class="b"><i style="width:41.7%"></i></div><div class="a"><i style="width:83.3%"></i></div></div><div class="v"><b class="num">10</b><small class="num">antes 5</small></div></div><div class="fstep"><span>Agendaram</span><div class="fbars"><div class="b"><i style="width:8.3%"></i></div><div class="a"><i style="width:25.0%"></i></div></div><div class="v"><b class="num">3</b><small class="num">antes 1</small></div></div></div>
-      <div class="rates">
-        <div class="rate"><span class="label">Resposta</span><b class="num up">83%</b><small>era 71%</small></div>
-        <div class="rate"><span class="label">Lead → agend.</span><b class="num up">25%</b><small>era 14%</small></div>
-        <div class="rate"><span class="label">Custo/agend.</span><b class="num">R$ 145</b><small>era R$ 785</small></div>
-      </div>
-      <p class="note">Na plataforma: <strong>19 conversões a R$ 22,87</strong> (eram 19 a R$ 41,32). A taxa de conversão subiu de 13,5% para 20,9%.</p>
-    </section>
-  </div>
-
   <section class="card">
-    <div class="card-head"><div><div class="eyebrow">Leads que entraram desde 26/09 · consultas até 15/10</div><h2>Do agendamento ao fechamento</h2></div><span class="pill">75% de fechamento na consulta</span></div>
-    <div class="chain">
-      <div class="link"><span class="label">Agendaram</span><span class="value num">10</span><span class="pct">consultas já ocorridas</span></div>
-      <div class="link"><span class="label">Compareceram</span><span class="value num">8</span><span class="pct">80%</span></div>
-      <div class="link"><span class="label">Em negociação</span><span class="value num">2</span><span class="pct">25%</span></div>
-      <div class="link win"><span class="label">Fecharam</span><span class="value num">6</span><span class="pct">75% de quem compareceu</span></div>
-    </div>
-    <table class="ctab">
-      <thead><tr><th>Origem</th><th>Agend.</th><th>Compar.</th><th class="hs">Negoc.</th><th>Fech.</th></tr></thead>
-      <tbody>
-        <tr><td>Meta Ads</td><td class="num">4</td><td class="num">4</td><td class="num hs">1</td><td class="num">3</td></tr>
-        <tr><td>Google Ads</td><td class="num">3</td><td class="num">2</td><td class="num hs">1</td><td class="num">1</td></tr>
-        <tr><td>Instagram orgânico</td><td class="num">1</td><td class="num">1</td><td class="num hs">0</td><td class="num">1</td></tr>
-        <tr><td>Indicação</td><td class="num">1</td><td class="num">1</td><td class="num hs">0</td><td class="num">1</td></tr>
-        <tr><td>Sem identificação</td><td class="num">1</td><td class="num">0</td><td class="num hs">0</td><td class="num">0</td></tr>
-      </tbody>
-    </table>
-    <p class="note">O Meta fechou 3 de 4 agendamentos. A consulta da Silvana (Google, 06/10) ainda está sem status na planilha e não entrou na conta.</p>
-  </section>
-
-  <section class="card">
-    <div class="card-head"><div><div class="eyebrow">Cadência · leads de setembro e outubro</div><h2>Quanto tempo leva</h2></div></div>
-    <div class="big2">
-      <div class="t"><span class="label">Do lead até a consulta</span><b class="num">6 dias</b><small>mediana · 68% em até 7 dias (44 consultas)</small></div>
-      <div class="t"><span class="label">Do lead até o fechamento</span><b class="num">5 dias</b><small>mediana · 76% em até 7 dias (21 fechamentos)</small></div>
-    </div>
+    <div class="card-head"><div><div class="eyebrow">Os 15 fechamentos de outubro</div><h2>Quando cada lead entrou</h2></div><span class="pill">8 de 15 são leads da gestão</span></div>
     <div class="row">
-      <div class="hist" role="img" aria-label="Dias do lead até a consulta"><div class="eyebrow" style="color:var(--muted)">Dias até a consulta</div><div class="hrow"><span>até 2 dias</span><div class="track"><i class="" style="width:57.9%"></i></div><b class="num">11</b></div><div class="hrow"><span>3 a 7 dias</span><div class="track"><i class="" style="width:100.0%"></i></div><b class="num">19</b></div><div class="hrow"><span>8 a 14 dias</span><div class="track"><i class="" style="width:52.6%"></i></div><b class="num">10</b></div><div class="hrow"><span>15 a 30 dias</span><div class="track"><i class="" style="width:15.8%"></i></div><b class="num">3</b></div><div class="hrow"><span>mais de 30</span><div class="track"><i class="" style="width:5.3%"></i></div><b class="num">1</b></div></div>
-      <div class="hist" role="img" aria-label="Dias do lead até o fechamento"><div class="eyebrow" style="color:var(--muted)">Dias até o fechamento</div><div class="hrow"><span>até 2 dias</span><div class="track"><i class="g" style="width:100.0%"></i></div><b class="num">8</b></div><div class="hrow"><span>3 a 7 dias</span><div class="track"><i class="g" style="width:100.0%"></i></div><b class="num">8</b></div><div class="hrow"><span>8 a 14 dias</span><div class="track"><i class="g" style="width:37.5%"></i></div><b class="num">3</b></div><div class="hrow"><span>15 a 30 dias</span><div class="track"><i class="g" style="width:0.0%"></i></div><b class="num">0</b></div><div class="hrow"><span>mais de 30</span><div class="track"><i class="g" style="width:25.0%"></i></div><b class="num">2</b></div></div>
+      <div class="hist">
+        <div class="eyebrow" style="color:var(--muted)">Mês de entrada do lead</div>
+        <div class="vcols" role="img" aria-label="Fechamentos por mês de entrada do lead: 2025 2, julho 2, agosto 3, setembro 4, outubro 4"><div class="vc"><b class="num">2</b><i style="height:75px"></i></div><div class="vc"><b class="num">2</b><i style="height:75px"></i></div><div class="vc"><b class="num">3</b><i style="height:112px"></i></div><div class="vc g"><b class="num">4</b><i style="height:150px"></i></div><div class="vc g"><b class="num">4</b><i style="height:150px"></i></div></div>
+        <div class="vlabels"><span>2025<small>Carolina, Larissa</small></span><span>Jul<small>Yasmin, Esdras</small></span><span>Ago<small>Sarah L., Roger, Bryanee</small></span><span>Set<small>Naiara, Bryan, Rebeca, Dayane</small></span><span>Out<small>3 de anúncio + 1 indicação</small></span></div>
+        <div class="legend"><span><i class="sw" style="background:#a3a9b8"></i>Leads anteriores</span><span><i class="sw" style="background:var(--good)"></i>Leads da gestão (desde 26/09)</span></div>
+      </div>
+      <div class="hist">
+        <div class="eyebrow" style="color:var(--muted)">Origem do lead</div>
+        <div class="hrow"><span>Google Ads</span><div class="track"><i class="" style="width:100.0%"></i></div><b class="num">5</b></div><div class="hrow"><span>Meta Ads</span><div class="track"><i class="" style="width:60.0%"></i></div><b class="num">3</b></div><div class="hrow"><span>Instagram</span><div class="track"><i style="background:#a3a9b8" class="" style="width:20.0%"></i></div><b class="num">1</b></div><div class="hrow"><span>Indicação</span><div class="track"><i style="background:#a3a9b8" class="" style="width:20.0%"></i></div><b class="num">1</b></div><div class="hrow"><span>Sem ID</span><div class="track"><i style="background:#a3a9b8" class="" style="width:20.0%"></i></div><b class="num">1</b></div><div class="hrow"><span>Não registrada</span><div class="track"><i style="background:#a3a9b8" class="" style="width:80.0%"></i></div><b class="num">4</b></div>
+        <p class="note">O Google é a origem que mais fechou no mês. Quatro fechamentos são de leads sem origem registrada na planilha.</p>
+      </div>
     </div>
-    <p class="note">O fechamento acontece, na maioria das vezes, <strong>na própria consulta</strong>. A maior parte das vendas sai na primeira semana do lead. Ainda assim, 2 pacientes fecharam depois de mais de 45 dias, o que mostra o valor do follow-up.</p>
+    <p class="note">Um fechamento de outubro nem sempre é um lead de outubro. Por isso separamos pela data em que o lead entrou: <strong>7 vieram de leads antigos que voltaram</strong> e <strong>8 de leads que entraram já na nova gestão</strong>.</p>
   </section>
 
   <section class="card">
-    <div class="card-head"><div><div class="eyebrow">Fechamentos registrados em outubro</div><h2>Separados pela data de entrada do lead</h2></div><span class="pill">11 fechamentos</span></div>
-    <div class="cohort">
-      <div class="cbox"><h3>Leads da nova gestão (desde 26/09)</h3><span class="n num">5</span>
-        <ul>
-          <li><span>Naiara</span><small>Meta · lead 30/09 · consulta 02/10</small></li>
-          <li><span>Rebeca</span><small>Meta · lead 30/09 · consulta 07/10</small></li>
-          <li><span>Dayane</span><small>Google · lead 30/09 · consulta 06/10</small></li>
-          <li><span>Bryan</span><small>Instagram · lead 26/09 · consulta 06/10</small></li>
-          <li><span>Sarah Cristina</span><small>Indicação · lead 07/10 · consulta 09/10</small></li>
-        </ul>
-      </div>
-      <div class="cbox old"><h3>Leads anteriores que voltaram</h3><span class="n num">6</span>
-        <ul>
-          <li><span>Roger</span><small>lead 30/08 · consulta 15/10</small></li>
-          <li><span>Sarah Louise</span><small>lead 18/08 · consulta 07/10</small></li>
-          <li><span>Esdras</span><small>Google · lead 21/07</small></li>
-          <li><span>Yasmin</span><small>Google · lead 13/07</small></li>
-          <li><span>Carolina e Larissa</span><small>leads de 2025</small></li>
-        </ul>
-      </div>
+    <div class="card-head"><div><div class="eyebrow">Ajustes do mês</div><h2>O que fizemos em outubro</h2></div></div>
+    <div class="acts">
+      <div class="act"><span class="when">Meta Ads</span><h3>Estrutura aberta pausada</h3><p>A campanha trazia conversas baratas, mas os feedbacks do atendimento mostraram que esses contatos não avançavam. Depois de confirmar, pausamos.</p><span class="res">83 conversas, 0 fechamentos</span></div>
+      <div class="act"><span class="when">Meta Ads</span><h3>Conselho no Funil completo</h3><p>Adicionamos um novo criativo do Conselho na campanha de Funil completo, que concentra a verba agora e trouxe o fechamento do Meta no mês.</p><span class="res">Criativo novo em teste</span></div>
+      <div class="act g"><span class="when">Google Ads</span><h3>Palavras-chave estabilizadas</h3><p>Ajustamos as palavras-chave para buscar mais intenção de cirurgia. Depois do período de recalibração, a campanha estabilizou.</p><span class="res">Custo por conversão de R$ 41,32 para R$ 22,87</span></div>
     </div>
-    <p class="note">Somando a Raphaela (Meta, fechou em 30/09), são <strong>4 fechamentos vindos de anúncio</strong> entre os leads que entraram desde o início da gestão.</p>
   </section>
 
   <div class="row">
     <section class="card">
-      <div class="card-head"><div><div class="eyebrow">Próximas consultas</div><h2>Agenda e negociações</h2></div></div>
-      <ul class="agenda">
-        <li><span class="date num">16/10</span><span class="who">Tayrine<small>Meta · lead 14/10</small></span><span class="tg">Agendada</span></li>
-        <li><span class="date num">19/10</span><span class="who">Aline<small>Google · lead 13/10</small></span><span class="tg">Agendada</span></li>
-        <li><span class="date num">22/10</span><span class="who">Eder<small>Meta · lead 09/10</small></span><span class="tg">Agendada</span></li>
-        <li><span class="date num">23/10</span><span class="who">Graciele<small>Google · lead 13/10</small></span><span class="tg">Agendada</span></li>
-        <li><span class="date num">02/12</span><span class="who">Raquel<small>Instagram · lead 14/10</small></span><span class="tg">Agendada</span></li>
-        <li><span class="date">Aberto</span><span class="who">Bruna, Beatriz e Ernani<small>Meta, Google e Google</small></span><span class="tg neg">Em negociação</span></li>
-      </ul>
-    </section>
-    <section class="card spread">
-      <div class="card-head"><div><div class="eyebrow">Nas conversas da semana</div><h2>O que travou</h2></div></div>
-      <div class="hchart">
-        <div class="hist"><div class="hrow"><span>Convênio</span><div class="track"><i class="" style="width:100.0%"></i></div><b class="num">6</b></div><div class="hrow"><span>ATM / DTM</span><div class="track"><i class="" style="width:33.3%"></i></div><b class="num">2</b></div><div class="hrow"><span>Distância</span><div class="track"><i class="" style="width:33.3%"></i></div><b class="num">2</b></div><div class="hrow"><span>Outros proced.</span><div class="track"><i class="" style="width:16.7%"></i></div><b class="num">1</b></div></div>
+      <div class="card-head"><div><div class="eyebrow">Canal · outubro</div><h2>Meta Ads</h2></div><span class="pill">1 fechamento de lead de outubro</span></div>
+      <div class="stats">
+        <div class="stat"><div class="label">Investido</div><div class="value num">R$ 1.331,14</div></div>
+        <div class="stat"><div class="label">Conversas</div><div class="value num">153</div></div>
+        <div class="stat"><div class="label">Custo/conversa</div><div class="value num">R$ 8,70</div></div>
       </div>
-      <p class="note">Convênio segue como principal objeção, vinda de contatos sem identificação (4) e do Meta (2). Dois leads do Google moram fora de BH (Ibirité e Conceição do Mato Dentro).</p>
+      <div class="hist"><div class="eyebrow" style="color:var(--muted)">Funil na planilha · leads de outubro</div><div class="hrow"><span>Leads</span><div class="track"><i style="width:100.0%;background:var(--c-meta1)"></i></div><b class="num">127</b></div><div class="hrow"><span>Agendaram</span><div class="track"><i style="width:2.4%;background:var(--c-meta1)"></i></div><b class="num">3</b></div><div class="hrow"><span>Compareceram</span><div class="track"><i style="width:1.5%;background:var(--c-meta1)"></i></div><b class="num">1</b></div><div class="hrow"><span>Fecharam</span><div class="track"><i style="width:1.5%;background:var(--c-meta1)"></i></div><b class="num">1</b></div></div>
+      <div class="rates">
+        <div class="rate"><span class="label">Custo/lead</span><b class="num">R$ 10,48</b><small>na planilha</small></div>
+        <div class="rate"><span class="label">Lead → agend.</span><b class="num">2,4%</b><small>3 de 127</small></div>
+        <div class="rate"><span class="label">Custo/agend.</span><b class="num">R$ 444</b><small>3 agendamentos</small></div>
+      </div>
+      <p class="note">Funil completo: <strong>70 conversas a R$ 14,46</strong>, com o fechamento do mês. Estrutura aberta: 83 conversas a R$ 3,36, hoje pausada. Remarketing: R$ 39,72.</p>
+    </section>
+    <section class="card">
+      <div class="card-head"><div><div class="eyebrow">Canal · outubro</div><h2>Google Ads</h2></div><span class="pill">2 fechamentos de leads de outubro</span></div>
+      <div class="stats">
+        <div class="stat"><div class="label">Investido</div><div class="value num">R$ 1.737,37</div></div>
+        <div class="stat"><div class="label">Conversões</div><div class="value num">56</div></div>
+        <div class="stat"><div class="label">Custo/conv.</div><div class="value num">R$ 31,02</div></div>
+      </div>
+      <div class="hist"><div class="eyebrow" style="color:var(--muted)">Funil na planilha · leads de outubro</div><div class="hrow"><span>Leads</span><div class="track"><i style="width:100.0%;"></i></div><b class="num">31</b></div><div class="hrow"><span>Agendaram</span><div class="track"><i style="width:19.4%;"></i></div><b class="num">6</b></div><div class="hrow"><span>Compareceram</span><div class="track"><i style="width:6.5%;"></i></div><b class="num">2</b></div><div class="hrow"><span>Fecharam</span><div class="track"><i style="width:6.5%;"></i></div><b class="num">2</b></div></div>
+      <div class="rates">
+        <div class="rate"><span class="label">Custo/lead</span><b class="num">R$ 56,04</b><small>na planilha</small></div>
+        <div class="rate"><span class="label">Lead → agend.</span><b class="num up">19%</b><small>6 de 31</small></div>
+        <div class="rate"><span class="label">Custo/agend.</span><b class="num">R$ 290</b><small>6 agendamentos</small></div>
+      </div>
+      <p class="note">338 cliques a R$ 5,14 e taxa de conversão de 16,6%. O lead do Google custa mais, mas <strong>agenda 8x mais</strong> que o do Meta.</p>
     </section>
   </div>
 
   <section class="card">
-    <div class="card-head"><div><div class="eyebrow">Próxima semana</div><h2>Próximos passos</h2></div></div>
+    <div class="card-head"><div><div class="eyebrow">Evolução semanal</div><h2>Custo por resultado nas plataformas</h2></div></div>
+    <div class="lines">
+      <div class="lrow h"><span></span><span style="text-align:center">26/09 a 02/10</span><span style="text-align:center">02 a 08/10</span><span style="text-align:center">09 a 15/10</span></div>
+      <div class="lrow"><span>Meta · custo por conversa</span><div class="c"><b class="num">R$ 9,14</b><small>R$ 567 · 62</small></div><div class="c best"><b class="num">R$ 6,08</b><small>R$ 425 · 70</small></div><div class="c"><b class="num">R$ 12,32</b><small>R$ 406 · 33</small></div></div>
+      <div class="lrow"><span>Google · custo por conversão</span><div class="c"><b class="num">R$ 25,91</b><small>R$ 518 · 20</small></div><div class="c"><b class="num">R$ 41,32</b><small>R$ 785 · 19</small></div><div class="c best"><b class="num">R$ 22,87</b><small>R$ 434 · 19</small></div></div>
+    </div>
+    <p class="note">No Meta, o custo subiu na última semana porque <strong>pausamos a Estrutura aberta</strong>, que trazia volume barato sem qualidade. No Google, a campanha <strong>estabilizou depois do ajuste de palavras-chave</strong> e o custo voltou a cair. Dados do Google da semana do meio referentes a 01 a 09/10.</p>
+  </section>
+
+  <section class="card">
+    <div class="card-head"><div><div class="eyebrow">Meta Ads · leads de outubro</div><h2>Criativos x resultado</h2></div><span class="pill">Fonte: planilha</span></div>
+    <div class="scroll">
+      <table class="ctable">
+        <thead><tr><th>Criativo</th><th>Leads</th><th>Agend.</th><th class="hide-sm">Compar.</th><th>Fech.</th></tr></thead>
+        <tbody><tr><td class="cre"><b>Conselho</b><small>Estrutura aberta · AD06</small></td><td class="num">44</td><td class="num">1</td><td class="num hide-sm">0</td><td class="num">0</td></tr><tr><td class="cre"><b>Se seu siso já doeu?</b><small>Funil completo · Laura</small></td><td class="num">27</td><td class="num">1</td><td class="num hide-sm">0</td><td class="num">0</td></tr><tr class="top"><td class="cre"><b>Vídeo Parestesia</b><small>Funil completo · Laura</small></td><td class="num">16</td><td class="num">1</td><td class="num hide-sm">1</td><td class="num">1</td></tr><tr><td class="cre"><b>Se você tem o dente siso deitado</b><small>Estrutura aberta · AD01</small></td><td class="num">14</td><td class="num">0</td><td class="num hide-sm">0</td><td class="num">0</td></tr><tr><td class="cre"><b>Dente siso deitado (antigo)</b><small>Estrutura aberta · AD03</small></td><td class="num">14</td><td class="num">0</td><td class="num hide-sm">0</td><td class="num">0</td></tr><tr><td class="cre"><b>Siso perto do nervo</b><small>Estrutura aberta · AD02</small></td><td class="num">11</td><td class="num">0</td><td class="num hide-sm">0</td><td class="num">0</td></tr><tr><td class="cre"><b>Se o seu siso está perto do nervo</b><small>Estrutura aberta · AD04</small></td><td class="num">1</td><td class="num">0</td><td class="num hide-sm">0</td><td class="num">0</td></tr></tbody>
+      </table>
+    </div>
+    <p class="note">O <strong>Vídeo Parestesia</strong> fez o único fechamento do Meta entre os leads de outubro. O <strong>Conselho</strong> trouxe mais leads (44) na Estrutura aberta, com 1 agendamento. Agora uma nova versão dele roda no Funil completo, para testar com um público mais qualificado.</p>
+  </section>
+
+  <section class="card">
+    <div class="card-head"><div><div class="eyebrow">Próximos passos</div><h2>Para o restante de outubro</h2></div></div>
     <div class="steps">
-      <div class="step"><span class="n">1</span><h3>Manter a nova estrutura</h3><p>Dar tempo para as campanhas estabilizarem e confirmar a melhora na qualidade com mais uma semana de dados.</p></div>
-      <div class="step"><span class="n">2</span><h3>Follow-up ativo</h3><p>A maioria fecha em até 7 dias, mas há fechamentos depois de 45 dias. Vale retomar quem não respondeu e quem está em negociação.</p></div>
-      <div class="step"><span class="n">3</span><h3>Atualizar a planilha</h3><p>Preencher comparecimento e fechamento logo após cada consulta para medirmos o resultado real de cada canal.</p></div>
+      <div class="step"><span class="n">1</span><h3>Priorizar o que agenda</h3><p>O Google estabilizou e agenda 19% dos leads. Manter a campanha sem grandes mudanças e acompanhar o custo por agendamento.</p></div>
+      <div class="step"><span class="n">2</span><h3>Criativos que fecham</h3><p>Acompanhar o novo Conselho no Funil completo e manter a verba nos criativos com agendamento, como a Parestesia.</p></div>
+      <div class="step"><span class="n">3</span><h3>Origem de todo lead</h3><p>4 dos 15 fechamentos não têm origem registrada. Registrar sempre ajuda a investir onde dá resultado.</p></div>
     </div>
   </section>
 
-  <footer>Advance Digital · HL Bucomaxilo · Meta Ads, Google Ads e planilha de atendimentos · 09 a 15/10/2026</footer>
+  <footer>Advance Digital · HL Bucomaxilo · Relatório de outubro · 01 a 21/10/2026</footer>
 </div>
 </body>
 </html>
